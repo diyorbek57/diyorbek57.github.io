@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -30,7 +30,7 @@
 </div>
 <div id="Page">
     <div id="Background">
-        <canvas data-engine="three.js r164" width="2460" height="295" style="width: 1640px; height: 197px;"></canvas>
+        <canvas></canvas>
     </div>
     <div class="mask" id="Mask">
         <div class="mask_top"></div>
@@ -44,11 +44,11 @@
     </div>
     <div class="theme" id="Theme" x-data="">
         <div class="theme_colors" @click="$store.app.toggleTheme()">
-            <div class="theme_btn" class="{ 'is-selected': $store.app.theme === 'light' }">
+            <div class="theme_btn" :class="{ 'is-selected': $store.app.theme === 'light' }">
                 <div class="_box"></div>
                 <div class="_text">Light</div>
             </div>
-            <div class="theme_btn" class="{ 'is-selected': $store.app.theme === 'dark' }">
+            <div class="theme_btn" :class="{ 'is-selected': $store.app.theme === 'dark' }">
                 <div class="_box"></div>
                 <div class="_text">Dark</div>
             </div>
@@ -63,19 +63,19 @@
         <p class="siteHeader_label">Mobile Developer</p>
         <nav class="siteHeader_nav" x-data="">
             <ol>
-                <li class="{ 'is-selected': $store.app.currentPath === '/' }">
+                <li :class="{ 'is-selected': $store.app.currentPath === '/' }">
                     <div class="_dot">●</div>
                     <a class="_text" href="/">Home</a></li>
-                <li class="{ 'is-selected': $store.app.currentPath === '/projects/' }">
+                <li :class="{ 'is-selected': $store.app.currentPath === '/projects/' }">
                     <div class="_dot">●</div>
                     <a class="_text" href="/projects/">Projects</a></li>
-                <li class="{ 'is-selected': $store.app.currentPath === '/info/' }">
+                <li :class="{ 'is-selected': $store.app.currentPath === '/info/' }">
                     <div class="_dot">●</div>
                     <a class="_text" href="/info/">Info</a></li>
-                <li class="{ 'is-selected': $store.app.currentPath === '/contact/' }">
+                <li :class="{ 'is-selected': $store.app.currentPath === '/contact/' }">
                     <div class="_dot">●</div>
                     <a class="_text" href="/contact/">Contact</a></li>
-                <li class="{ 'is-selected': $store.app.currentPath === '/faq/' }">
+                <li :class="{ 'is-selected': $store.app.currentPath === '/faq/' }">
                     <div class="_dot">●</div>
                     <a class="_text" href="/faq/">FAQ</a></li>
             </ol>
